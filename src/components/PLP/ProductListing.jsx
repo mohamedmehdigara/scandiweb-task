@@ -15,9 +15,9 @@ class ProductListing extends Component {
     this.state = { category: null, response: null, error: false };
   }
 
-  handleClick(id) {
-    <Navigate to={`/productDetails/${id}`} />;
-  }
+  handleClick(id)  {
+    return (<Navigate to={`/productDetails/${id}`} />
+  )}
   handleCartClick(id) {
     client.post(GET_PRODUCT_BY_ID(id)).then((result) => {
       let { product } = result;
